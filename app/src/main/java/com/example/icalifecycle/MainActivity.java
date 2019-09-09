@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         System.out.println("On start");
     }
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        System.out.println("On restart");
+    }
 
     @Override
     protected void onResume(){
