@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ICALifecycle</string>
     <string name="button">GO TO OTHER ACTIVITY</string>
+    <string name="title">Hi There</string>
 </resources>

@@ -8,9 +8,11 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi There"
+        android:layout_marginLeft="8dp"
+        android:text="@string/title"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,9 +22,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:text="@string/button"
+        android:layout_marginLeft="8dp"
         android:gravity="center"
         android:onClick="goToOther"
-        android:textSize="32dp"/>
+        android:text="@string/button"
+        android:textSize="32dp" />
 
 </LinearLayout>

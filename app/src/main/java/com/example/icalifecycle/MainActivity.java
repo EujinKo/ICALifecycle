@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,13 +20,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
     @Override
+    protected void onStart(){
+        super.onStart();
+        System.out.println("On start");
+    }
+
+    @Override
     protected void onResume(){
         super.onResume();
-        //System.out.println("On start"+count);
-        str += "resume "+count+"\n";
-        Intent intent = getIntent();
-        intent.putExtra(EXTRA_MESSAGE,str);
+        System.out.println("On resume");
 
+        if(count==0) {
+            str += getText(R.string.title);
+        } else {
+            //System.out.println("On start"+count);
+            str += "\n"+"resume "+count;
+            setContentView(R.layout.activity_main);
+
+            TextView textView = findViewById(R.id.editText);
+            textView.setText(str);
+        }
         count++;
     }
 
