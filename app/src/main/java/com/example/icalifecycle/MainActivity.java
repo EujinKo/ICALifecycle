@@ -6,31 +6,53 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     private static String str ="";
     private static int count = 0;
+    private static Date pausedDate;
+    private static Date resumeDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
     }
-    @Override
+
     protected void onStart(){
         super.onStart();
         System.out.println("On start");
     }
-    @Override
+
     protected void onRestart(){
         super.onRestart();
         System.out.println("On restart");
     }
 
-    @Override
+    protected void onPause(){
+        super.onPause();
+
+        pausedDate = new Date();
+
+        System.out.println("On pause");
+    }
+
+    protected void onStop(){
+        super.onStop();
+        System.out.println("On stop");
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        System.out.println("On destroy");
+    }
+
+
     protected void onResume(){
         super.onResume();
         System.out.println("On resume");
@@ -45,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
             TextView textView = findViewById(R.id.editText);
             textView.setText(str);
         }
+        if(resumeDate!=null){
+            resumeDate = new Date();
+            int awaySeconds = (int) ( (pausedDate.getTime()-resumeDate.getTime())/1000);
+
+            TextView timeView = (TextView) findViewById(R.id.timeText);
+            timeView.setText("You were away for"+awaySeconds+" seconds");
+
+        }
+
+
         count++;
     }
 
