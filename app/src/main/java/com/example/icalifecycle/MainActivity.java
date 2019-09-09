@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        goToOther();
+    }
+
+    protected void onResume(){
+        super.onResume();
+        System.out.println("On start");
     }
 
     public void goToOther(View view){
