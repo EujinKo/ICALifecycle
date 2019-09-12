@@ -19,9 +19,7 @@ public class OtherActivity extends AppCompatActivity {
     //));
 
 
-    static List<String> shoppingList = new ArrayList<String>(Arrays.asList(
-            "strawberry","banana","cat","grape"
-    ));
+    static String[] shoppingList = new String[]{"strawberry","banana","cat","grape"};
 
     static int[] shoppingListImages = new int[]{
             R.drawable.banana,R.drawable.strawberry,R.drawable.cat,R.drawable.grape
