@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void submitShoppingListChange(View view){
+        Intent intent = new Intent(this,OtherActivity.class);
+    }
+
+
     protected void onStart(){
         super.onStart();
         System.out.println("On start");

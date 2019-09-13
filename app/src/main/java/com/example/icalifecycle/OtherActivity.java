@@ -30,53 +30,44 @@ public class OtherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
-
-        ListView shoppingListView = (ListView)findViewById(R.id.shopping_list_view);
-
-
-
-//        //Set up ArrrayAdpater filled with strings in ArrayList
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-//                R.layout.shopping_list_row,R.id.shopping_list_row_item, shoppingList);
-//
-//        shoppingListView.setAdapter(arrayAdapter);
+    /*
+        //TODO: ArrayAdapter
+        ListView shoppingListView = findViewById(R.id.shopping_list_view);
 
 
+
+        //Set up ArrrayAdpater filled with strings in ArrayList
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+                R.layout.shopping_list_row,R.id.shopping_list_row_item, shoppingList);
+
+        shoppingListView.setAdapter(arrayAdapter);
+
+     */
+
+    /*
+        //TODO: SimpleAdapter
         //Set up SimpleAdapter filled with image, strings
         List<HashMap<String, String>> aList =
                 new ArrayList<HashMap<String, String>>();
 
         for (int i = 0; i < shoppingListImages.length; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
-            hm.put("shopping_list_row_image", Integer.toString(shoppingListImages[i])+"");
+            hm.put("image", Integer.toString(shoppingListImages[i])+"");
             hm.put("shopping_list_row_text", shoppingList[i]);
             aList.add(hm);
         }
 
-        String[] from = {"shopping_list_row_image", "shopping_list_row_text"};
+        String[] from = {"image", "text"};
         int[] to = {R.id.shopping_list_row_image, R.id.shopping_list_row_text};
 
         SimpleAdapter simpleAdapter =
                 new SimpleAdapter(getBaseContext(), aList,
                         R.layout.shopping_list_row, from, to);
 
-        shoppingListView = (ListView) findViewById(R.id.shopping_list_view);
+        ListView shoppingListView = (ListView) findViewById(R.id.shopping_list_view);
         shoppingListView.setAdapter(simpleAdapter);
 
-        // Get a reference to the ListView
-        shoppingListView =
-                (ListView)findViewById(R.id.shopping_list_view);
 
-        // Create a new Array Adapter
-        // Specify which layout and view to use for a row
-        // and the data (array) to use
-        ArrayAdapter<String> arrayAdapter = new
-                ArrayAdapter<String>(this, R.layout.shopping_list_row,
-                R.id.shopping_list_row_text, shoppingList);
-
-        // Link the ListView and the Adapter
-        shoppingListView.setAdapter(arrayAdapter);
-
-
+     */
     }
 }
