@@ -7,22 +7,25 @@
         android:id="@+id/shopping_list_row_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_gravity="center"/>
-
-
-
-    <TextView
-        android:id="@+id/shopping_list_row_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="60dp"
-        />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/shopping_list_row_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="60dp"
-        />
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="#2196F3"
+        android:textSize="55dp" />
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/shopping_list_row_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:textSize="60dp"-->
+<!--        />-->
+
 
 </LinearLayout>
